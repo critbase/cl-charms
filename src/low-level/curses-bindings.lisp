@@ -36,7 +36,7 @@
 #+unicode
 (cffi:define-foreign-library libcurses
   (:darwin (:or "libncurses.dylib" "libcurses.dylib"))
-  (:unix (:or "libncursesw.so.6"
+  (:unix (:or ;"libncursesw.so.6"
               "libncursesw.so.5"
               "libncursesw.so.14.0"
               "libncursesw.so"))
@@ -49,11 +49,11 @@
 (cffi:define-foreign-library libcurses
   (:darwin (:or "libncurses.dylib"
                 "libcurses.dylib"))
-  (:unix (:or "libncursesw.so.6"        ; XXX: is this the right thing
+  (:unix (:or ;"libncursesw.so.6"        ; XXX: is this the right thing
                                         ; to load? Should we also add
                                         ; libncursesw.so as a
                                         ; fallback?
-              "libncurses.so.6"
+              ;"libncurses.so.6"
               "libncurses.so.5"
               "libncursesw.so.14.0"
               "libncurses.so"
